@@ -383,6 +383,26 @@ main{
 .impact-badge.medium{ border:1px solid var(--ink); color:var(--ink); }
 .impact-badge.high{ border:2px double var(--ink); color:var(--ink); font-weight:700; }
 
+.status-legend{
+  margin-top:1.1rem;
+  padding-top:0.9rem;
+  border-top:1px dashed var(--rule);
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:0.5rem 1.2rem;
+}
+.status-legend .sl-item{
+  font-family:'Courier Prime', monospace;
+  font-size:0.72rem;
+  color:var(--ink-soft);
+  display:flex;
+  gap:0.5rem;
+  align-items:baseline;
+}
+.status-legend .badge, .status-legend .impact-badge{
+  flex-shrink:0;
+}
+
 .know-block{
   margin:1rem 0;
   display:grid;
