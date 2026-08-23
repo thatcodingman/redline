@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive — Redline</title>
+<meta name="description" content="Every Redline filing, searchable by company, date, and category.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="demo-banner">
+  <strong>EDITORIAL DEMONSTRATION</strong> — the filings below are fictional examples used to show the archive format.
+</div>
+
+<header class="masthead">
+  <div class="eyebrow">Archive</div>
+  <h1><a href="index.html">REDLINE</a></h1>
+  <p class="sub">Every filing, searchable by company, category, and date.</p>
+</header>
+
+<nav class="site-nav">
+  <a href="index.html">Docket</a>
+  <a href="about.html">About</a>
+  <a href="methodology.html">Methodology</a>
+  <a href="submit.html">Submit a Filing</a>
+  <a href="archive.html" aria-current="page">Archive</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <div class="search-row">
+    <input type="text" id="archive-search" placeholder="Search by company or keyword…" aria-label="Search filings">
+  </div>
+  <div class="filter-row" id="filter-row">
+    <button class="active" data-category="all">All</button>
+    <button data-category="arbitration">Arbitration</button>
+    <button data-category="privacy">Privacy / Data Retention</button>
+    <button data-category="fees">Fees</button>
+    <button data-category="ai">AI / Training</button>
+    <button data-category="cancellation">Cancellation</button>
+  </div>
+
+  <div id="archive-list">
+
+  <article class="case-file" data-tab="Docket No. RL-2026-005" data-category="arbitration" data-search="nimbus cloud storage arbitration dispute resolution class action">
+    <div class="stamp demo">Demo Filing</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">RL-2026-005 &middot; Arbitration Clause</div>
+        <h3><span class="company">Nimbus Cloud Storage</span> — Terms of Service</h3>
+      </div>
+      <div class="dates"><div>Fictional filing date: Aug 19, 2026</div></div>
+    </div>
+    <div class="clause-label">Section 14.2 — Dispute Resolution</div>
+    <div class="redline">
+      All disputes shall be resolved <del>in the courts of the user's home jurisdiction</del><ins>exclusively through binding individual arbitration administered under the rules of the American Arbitration Association, and users waive any right to participate in a class action</ins>.
+    </div>
+    <div class="case-footer">
+      <span>Category: Arbitration</span>
+      <a href="index.html">View on docket &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="Docket No. RL-2026-004" data-category="privacy" data-search="ferndale fitness app data retention deletion anonymized">
+    <div class="stamp demo">Demo Filing</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">RL-2026-004 &middot; Data Retention</div>
+        <h3><span class="company">Ferndale Fitness App</span> — Privacy &amp; Terms</h3>
+      </div>
+      <div class="dates"><div>Fictional filing date: Aug 12, 2026</div></div>
+    </div>
+    <div class="clause-label">Section 6.1 — Data Retention After Account Deletion</div>
+    <div class="redline">
+      Upon account deletion, personal data will be <del>permanently removed within 30 days</del><ins>retained in anonymized or aggregated form indefinitely for analytics and product improvement purposes</ins>.
+    </div>
+    <div class="case-footer">
+      <span>Category: Privacy / Data Retention</span>
+      <a href="index.html">View on docket &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="Docket No. RL-2026-003" data-category="fees" data-search="portside freelance marketplace fee schedule withdrawal">
+    <div class="stamp demo">Demo Filing</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">RL-2026-003 &middot; Fee Schedule</div>
+        <h3><span class="company">Portside Freelance Marketplace</span> — Terms of Service</h3>
+      </div>
+      <div class="dates"><div>Fictional filing date: Aug 5, 2026</div></div>
+    </div>
+    <div class="clause-label">Section 9.4 — Withdrawal Processing</div>
+    <div class="redline">
+      Withdrawals of earned funds are processed <del>free of charge within 2 business days</del><ins>subject to a 2.5% processing fee, with free withdrawals available only on the first business day of each month</ins>.
+    </div>
+    <div class="case-footer">
+      <span>Category: Fees</span>
+      <a href="index.html">View on docket &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="Docket No. RL-2026-002" data-category="ai" data-search="loom line photo editor license grant ai training machine learning">
+    <div class="stamp demo">Demo Filing</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">RL-2026-002 &middot; License Grant</div>
+        <h3><span class="company">Loom &amp; Line Photo Editor</span> — Terms of Service</h3>
+      </div>
+      <div class="dates"><div>Fictional filing date: Jul 29, 2026</div></div>
+    </div>
+    <div class="clause-label">Section 4.3 — License to User Content</div>
+    <div class="redline">
+      You grant us a license to use uploaded content <del>solely to provide and maintain the service to you</del><ins>to provide the service, and to train, improve, and develop machine learning and artificial intelligence models, on a worldwide, royalty-free, sublicensable basis</ins>.
+    </div>
+    <div class="case-footer">
+      <span>Category: AI / Training</span>
+      <a href="index.html">View on docket &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="Docket No. RL-2026-001" data-category="cancellation" data-search="cascade meal kit auto renewal cancellation subscription">
+    <div class="stamp demo">Demo Filing</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">RL-2026-001 &middot; Auto-Renewal</div>
+        <h3><span class="company">Cascade Meal Kit Co.</span> — Terms of Service</h3>
+      </div>
+      <div class="dates"><div>Fictional filing date: Jul 21, 2026</div></div>
+    </div>
+    <div class="clause-label">Section 3.2 — Subscription Cancellation Window</div>
+    <div class="redline">
+      Subscriptions may be canceled <del>at any time before the next billing date</del><ins>only by contacting support at least 5 business days before the next billing date, by phone during listed business hours</ins>.
+    </div>
+    <div class="case-footer">
+      <span>Category: Cancellation</span>
+      <a href="index.html">View on docket &rarr;</a>
+    </div>
+  </article>
+
+  </div>
+
+  <p id="no-results" class="mono" style="display:none; text-align:center; color:var(--ink-soft); padding:2rem 0;">No filings match that search.</p>
+</main>
+
+<footer>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="submit.html">Submit a Filing</a>
+    <a href="archive.html">Archive</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p>Redline verifies changes against archived and current Terms of Service documents. Not legal advice. Filed twice monthly.</p>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('archive-search');
+  const filterRow = document.getElementById('filter-row');
+  const cards = Array.from(document.querySelectorAll('#archive-list .case-file'));
+  const noResults = document.getElementById('no-results');
+  let activeCategory = 'all';
+
+  function applyFilters(){
+    const term = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    cards.forEach(card => {
+      const matchesCategory = activeCategory === 'all' || card.dataset.category === activeCategory;
+      const haystack = (card.dataset.search || '') + ' ' + card.textContent.toLowerCase();
+      const matchesSearch = term === '' || haystack.toLowerCase().includes(term);
+      const visible = matchesCategory && matchesSearch;
+      card.style.display = visible ? '' : 'none';
+      if (visible) visibleCount++;
+    });
+    noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+
+  filterRow.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    filterRow.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCategory = btn.dataset.category;
+    applyFilters();
+  });
+
+  searchInput.addEventListener('input', applyFilters);
+</script>
+
+</body>
+</html>

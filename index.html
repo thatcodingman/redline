@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redline — Terms of Service, Amended</title>
+<meta name="description" content="A twice-monthly docket of the Terms of Service changes companies quietly filed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #F3EEDF;
+    --paper-dark: #EAE2CC;
+    --ink: #1C1A16;
+    --ink-soft: #5C5748;
+    --ink-faint: #8A8471;
+    --rule: #C9BFA0;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(0,0,0,0.02), transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(0,0,0,0.015), transparent 45%);
+    color:var(--ink);
+    font-family:'Libre Baskerville', Georgia, serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;}
+
+  .mono{
+    font-family:'Courier Prime', monospace;
+  }
+
+  /* ---------- Header / masthead ---------- */
+  header.masthead{
+    border-bottom:3px double var(--ink);
+    padding:2.5rem 1.5rem 1.5rem;
+    text-align:center;
+    max-width:920px;
+    margin:0 auto;
+  }
+  .masthead .eyebrow{
+    font-family:'Courier Prime', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:0.6rem;
+  }
+  .masthead h1{
+    font-size:clamp(2.4rem, 6vw, 3.6rem);
+    margin:0;
+    letter-spacing:0.01em;
+    font-weight:700;
+  }
+  .masthead .sub{
+    font-style:italic;
+    color:var(--ink-soft);
+    margin-top:0.6rem;
+    font-size:1.02rem;
+  }
+  .masthead .meta-row{
+    display:flex;
+    justify-content:center;
+    gap:1.6rem;
+    margin-top:1.4rem;
+    font-family:'Courier Prime', monospace;
+    font-size:0.75rem;
+    color:var(--ink-soft);
+    flex-wrap:wrap;
+  }
+  .masthead .meta-row span{border-left:1px solid var(--rule); padding-left:1.6rem;}
+  .masthead .meta-row span:first-child{border-left:none; padding-left:0;}
+
+  /* ---------- Docket intro strip ---------- */
+  .docket-strip{
+    max-width:920px;
+    margin:0 auto;
+    padding:1.4rem 1.5rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    border-bottom:1px solid var(--rule);
+    flex-wrap:wrap;
+    gap:0.5rem;
+  }
+  .docket-strip h2{
+    font-size:0.95rem;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    margin:0;
+    font-family:'Courier Prime', monospace;
+    font-weight:700;
+  }
+  .docket-strip .count{
+    font-family:'Courier Prime', monospace;
+    font-size:0.8rem;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- Case file entries ---------- */
+  main{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 1.5rem 4rem;
+  }
+
+  .case-file{
+    position:relative;
+    background:var(--paper-dark);
+    border:1px solid var(--rule);
+    margin-top:2.4rem;
+    padding:1.8rem 1.8rem 1.6rem;
+    box-shadow:0 1px 0 rgba(0,0,0,0.04);
+  }
+  .case-file::before{
+    /* folder tab */
+    content:attr(data-tab);
+    position:absolute;
+    top:-1.05rem;
+    left:1.6rem;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Courier Prime', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.08em;
+    padding:0.28rem 0.7rem;
+    text-transform:uppercase;
+  }
+
+  .case-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:1rem;
+    flex-wrap:wrap;
+    margin-bottom:0.9rem;
+  }
+  .case-head .docket-no{
+    font-family:'Courier Prime', monospace;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+  }
+  .case-head h3{
+    margin:0.3rem 0 0;
+    font-size:1.5rem;
+    font-weight:700;
+  }
+  .case-head .company{
+    font-style:italic;
+    border-bottom:2px solid var(--ink);
+  }
+
+  .dates{
+    font-family:'Courier Prime', monospace;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+    text-align:right;
+  }
+  .dates div{margin-bottom:0.15rem;}
+
+  /* stamp — rendered as a worn ink stamp, graphite only, textured via layered borders */
+  .stamp{
+    position:absolute;
+    top:1.6rem;
+    right:1.8rem;
+    border:3px double var(--ink);
+    color:var(--ink);
+    font-family:'Courier Prime', monospace;
+    font-weight:700;
+    font-size:0.85rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    padding:0.35rem 0.7rem;
+    transform:rotate(-6deg);
+    opacity:0.72;
+    mix-blend-mode:multiply;
+    border-radius:2px;
+  }
+  @media (max-width:600px){
+    .stamp{position:static; display:inline-block; transform:rotate(-4deg); margin-bottom:0.8rem;}
+  }
+
+  .clause-label{
+    font-family:'Courier Prime', monospace;
+    font-size:0.7rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--ink-soft);
+    margin:1.1rem 0 0.4rem;
+  }
+
+  .redline{
+    font-size:1rem;
+    padding:0.9rem 1rem;
+    background:rgba(255,255,255,0.5);
+    border-left:3px solid var(--rule);
+  }
+  /* No color to lean on — deletions and insertions are told apart by
+     weight, decoration, and an explicit mono tag, the way a black-and-white
+     legal blackline actually reads. */
+  .redline del{
+    color:var(--ink-faint);
+    font-weight:400;
+    text-decoration:line-through;
+    text-decoration-thickness:1.5px;
+    text-decoration-color:var(--ink-soft);
+  }
+  .redline ins{
+    color:var(--ink);
+    font-weight:700;
+    text-decoration:underline;
+    text-decoration-thickness:1.5px;
+    text-underline-offset:2px;
+    font-style:normal;
+  }
+  .redline del::before, .redline ins::before{
+    font-family:'Courier Prime', monospace;
+    font-size:0.62em;
+    font-weight:700;
+    letter-spacing:0.06em;
+    vertical-align:middle;
+    margin:0 0.3em 0 0.15em;
+    padding:0.05em 0.3em;
+    border:1px solid var(--ink-soft);
+  }
+  .redline del::before{ content:"DEL"; color:var(--ink-faint); border-color:var(--ink-faint); }
+  .redline ins::before{ content:"ADD"; color:var(--ink); }
+
+  .verdict{
+    margin-top:1rem;
+    font-size:0.95rem;
+    color:var(--ink);
+  }
+  .verdict strong{
+    font-family:'Courier Prime', monospace;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--ink);
+    display:block;
+    margin-bottom:0.3rem;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:0.2rem;
+    width:fit-content;
+  }
+
+  .case-footer{
+    margin-top:1.2rem;
+    padding-top:0.8rem;
+    border-top:1px dashed var(--rule);
+    display:flex;
+    justify-content:space-between;
+    font-family:'Courier Prime', monospace;
+    font-size:0.7rem;
+    color:var(--ink-soft);
+    flex-wrap:wrap;
+    gap:0.5rem;
+  }
+  .case-footer a{
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid var(--ink-faint);
+  }
+  .case-footer a:hover{border-bottom-color:var(--ink);}
+
+  /* ---------- Footer ---------- */
+  footer{
+    max-width:920px;
+    margin:0 auto;
+    padding:2.5rem 1.5rem 3rem;
+    border-top:3px double var(--ink);
+    text-align:center;
+    font-family:'Courier Prime', monospace;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+  }
+  footer nav{
+    margin-bottom:1rem;
+  }
+  footer nav a{
+    margin:0 0.7rem;
+    text-decoration:none;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+  }
+  footer nav a:hover{color:var(--ink);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="eyebrow">Vol. I — Filed Twice Monthly</div>
+  <h1>REDLINE</h1>
+  <p class="sub">The terms of service changes companies didn't put in a headline.</p>
+  <div class="meta-row">
+    <span class="mono">Next docket: <strong>Sept 1, 2026</strong></span>
+    <span class="mono">Filed this cycle: <strong>5</strong></span>
+    <span class="mono">Since inception: <strong>5</strong></span>
+  </div>
+</header>
+
+<div class="docket-strip">
+  <h2>Current Docket — Aug 16–31, 2026</h2>
+  <span class="count mono">5 filings</span>
+</div>
+
+<main>
+
+  <article class="case-file" data-tab="Docket No. RL-2026-005">
+    <div class="stamp">Amended</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">RL-2026-005 &middot; Arbitration Clause</div>
+        <h3><span class="company">Nimbus Cloud Storage</span> — Terms of Service</h3>
+      </div>
+      <div class="dates">
+        <div>Filed by Nimbus: Aug 19, 2026</div>
+        <div>Verified by Redline: Aug 22, 2026</div>
+        <div>Prior version dated: Mar 3, 2025</div>
+      </div>
+    </div>
+
+    <div class="clause-label">Section 14.2 — Dispute Resolution</div>
+    <div class="redline">
+      All disputes shall be resolved <del>in the courts of the user's home jurisdiction</del><ins>exclusively through binding individual arbitration administered under the rules of the American Arbitration Association, and users waive any right to participate in a class action</ins>.
+    </div>
+
+    <div class="verdict">
+      <strong>What changed, plainly</strong>
+      You lose the right to sue in court or join a class action. This shift moved quietly from a "Legal" changelog entry with no user-facing notice.
+    </div>
+
+    <div class="case-footer">
+      <span>No email notice sent to existing users</span>
+      <a href="#">View full diff &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="Docket No. RL-2026-004">
+    <div class="stamp">Amended</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">RL-2026-004 &middot; Data Retention</div>
+        <h3><span class="company">Ferndale Fitness App</span> — Privacy &amp; Terms</h3>
+      </div>
+      <div class="dates">
+        <div>Filed by Ferndale: Aug 12, 2026</div>
+        <div>Verified by Redline: Aug 18, 2026</div>
+        <div>Prior version dated: Jan 9, 2026</div>
+      </div>
+    </div>
+
+    <div class="clause-label">Section 6.1 — Data Retention After Account Deletion</div>
+    <div class="redline">
+      Upon account deletion, personal data will be <del>permanently removed within 30 days</del><ins>retained in anonymized or aggregated form indefinitely for analytics and product improvement purposes</ins>.
+    </div>
+
+    <div class="verdict">
+      <strong>What changed, plainly</strong>
+      Deleting your account no longer deletes your data — it gets stripped of your name and kept forever. "Anonymized" data has re-identification risks the old policy didn't carry.
+    </div>
+
+    <div class="case-footer">
+      <span>Notice: banner shown on next login only</span>
+      <a href="#">View full diff &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="Docket No. RL-2026-003">
+    <div class="stamp">Amended</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">RL-2026-003 &middot; Fee Schedule</div>
+        <h3><span class="company">Portside Freelance Marketplace</span> — Terms of Service</h3>
+      </div>
+      <div class="dates">
+        <div>Filed by Portside: Aug 5, 2026</div>
+        <div>Verified by Redline: Aug 10, 2026</div>
+        <div>Prior version dated: Jul 2024</div>
+      </div>
+    </div>
+
+    <div class="clause-label">Section 9.4 — Withdrawal Processing</div>
+    <div class="redline">
+      Withdrawals of earned funds are processed <del>free of charge within 2 business days</del><ins>subject to a 2.5% processing fee, with free withdrawals available only on the first business day of each month</ins>.
+    </div>
+
+    <div class="verdict">
+      <strong>What changed, plainly</strong>
+      Freelancers now pay to access their own earnings on 29 out of 30 days a month, unless they plan every withdrawal around a single free day.
+    </div>
+
+    <div class="case-footer">
+      <span>Notice: buried in a linked "policy update" PDF</span>
+      <a href="#">View full diff &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="Docket No. RL-2026-002">
+    <div class="stamp">Amended</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">RL-2026-002 &middot; License Grant</div>
+        <h3><span class="company">Loom &amp; Line Photo Editor</span> — Terms of Service</h3>
+      </div>
+      <div class="dates">
+        <div>Filed by Loom &amp; Line: Jul 29, 2026</div>
+        <div>Verified by Redline: Aug 3, 2026</div>
+        <div>Prior version dated: Nov 2024</div>
+      </div>
+    </div>
+
+    <div class="clause-label">Section 4.3 — License to User Content</div>
+    <div class="redline">
+      You grant us a license to use uploaded content <del>solely to provide and maintain the service to you</del><ins>to provide the service, and to train, improve, and develop machine learning and artificial intelligence models, on a worldwide, royalty-free, sublicensable basis</ins>.
+    </div>
+
+    <div class="verdict">
+      <strong>What changed, plainly</strong>
+      Photos you edit can now be used to train the company's AI models, and that right can be passed on to third parties, with no opt-out mentioned.
+    </div>
+
+    <div class="case-footer">
+      <span>No email notice; changelog entry only</span>
+      <a href="#">View full diff &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="Docket No. RL-2026-001">
+    <div class="stamp">Amended</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">RL-2026-001 &middot; Auto-Renewal</div>
+        <h3><span class="company">Cascade Meal Kit Co.</span> — Terms of Service</h3>
+      </div>
+      <div class="dates">
+        <div>Filed by Cascade: Jul 21, 2026</div>
+        <div>Verified by Redline: Jul 27, 2026</div>
+        <div>Prior version dated: May 2023</div>
+      </div>
+    </div>
+
+    <div class="clause-label">Section 3.2 — Subscription Cancellation Window</div>
+    <div class="redline">
+      Subscriptions may be canceled <del>at any time before the next billing date</del><ins>only by contacting support at least 5 business days before the next billing date, by phone during listed business hours</ins>.
+    </div>
+
+    <div class="verdict">
+      <strong>What changed, plainly</strong>
+      Self-serve cancellation was quietly removed. You now need a phone call placed days in advance, during limited hours, to stop the next charge.
+    </div>
+
+    <div class="case-footer">
+      <span>Notice: none found in user-facing emails</span>
+      <a href="#">View full diff &rarr;</a>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <nav>
+    <a href="#">About</a>
+    <a href="#">Methodology</a>
+    <a href="#">Submit a Filing</a>
+    <a href="#">Archive</a>
+    <a href="#">Contact</a>
+  </nav>
+  <p>Redline verifies changes against archived and current Terms of Service documents. Not legal advice. Filed twice monthly.</p>
+</footer>
+
+</body>
+</html>

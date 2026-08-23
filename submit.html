@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit a Filing — Redline</title>
+<meta name="description" content="Spotted a Terms of Service change? Send it to Redline for verification.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="demo-banner">
+  <strong>EDITORIAL DEMONSTRATION</strong> — this form is not yet connected to a working inbox. See the note below the form.
+</div>
+
+<header class="masthead">
+  <div class="eyebrow">Submit a Filing</div>
+  <h1><a href="index.html">REDLINE</a></h1>
+  <p class="sub">Noticed a company slip a change into its Terms? Tell us where to look.</p>
+</header>
+
+<nav class="site-nav">
+  <a href="index.html">Docket</a>
+  <a href="about.html">About</a>
+  <a href="methodology.html">Methodology</a>
+  <a href="submit.html" aria-current="page">Submit a Filing</a>
+  <a href="archive.html">Archive</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+<div class="page-content">
+  <p class="lede">You don't need proof — just a tip. Redline will locate the prior version, verify the change, and date it before anything is published. See <a href="methodology.html">Methodology</a> for the full process.</p>
+
+  <form class="filing-form" action="mailto:tips@redline.example" method="post" enctype="text/plain">
+    <label for="company">Company name</label>
+    <input type="text" id="company" name="company" required placeholder="e.g. Nimbus Cloud Storage">
+
+    <label for="policy-url">Link to the current Terms or policy page</label>
+    <input type="url" id="policy-url" name="policy_url" required placeholder="https://">
+
+    <label for="change-date">Approximate date you noticed the change</label>
+    <input type="date" id="change-date" name="change_date">
+
+    <label for="description">What did you notice?</label>
+    <textarea id="description" name="description" required placeholder="Which section, and what changed as best you can tell — quote it if you can."></textarea>
+    <div class="hint">Screenshots or a saved copy of the old version help a lot but aren't required.</div>
+
+    <label for="email">Your email (optional, for follow-up only)</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com">
+
+    <button type="submit">Submit filing tip</button>
+  </form>
+
+  <p class="form-note">This form currently opens the visitor's email client via a <code>mailto:</code> action — it has no backend yet. Before launch, wire it to a real inbox or a form service (Formspree, a serverless function, etc.) so submissions don't depend on the visitor having a configured mail client.</p>
+</div>
+</main>
+
+<footer>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="submit.html">Submit a Filing</a>
+    <a href="archive.html">Archive</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p>Redline verifies changes against archived and current Terms of Service documents. Not legal advice. Filed twice monthly.</p>
+</footer>
+
+</body>
+</html>
