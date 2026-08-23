@@ -246,6 +246,21 @@ main{
   .stamp{position:static; display:inline-block; transform:rotate(-4deg); margin-bottom:0.8rem;}
 }
 
+.why-status{
+  font-family:'Courier Prime', monospace;
+  font-size:0.72rem;
+  color:var(--ink-soft);
+  margin:-0.4rem 0 1.1rem;
+  padding-bottom:0.7rem;
+  border-bottom:1px dashed var(--rule);
+}
+.why-status strong{
+  color:var(--ink);
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  font-size:0.66rem;
+}
+
 .clause-label{
   font-family:'Courier Prime', monospace;
   font-size:0.7rem;
@@ -313,6 +328,22 @@ main{
   color:var(--ink-soft);
 }
 .finding.interpretation p{ color:var(--ink-soft); font-style:italic; }
+
+.finding.community strong{
+  border-bottom-style:dotted;
+  color:var(--ink-soft);
+}
+.finding.community p{
+  color:var(--ink);
+  font-style:normal;
+}
+.finding.community .attribution{
+  font-family:'Courier Prime', monospace;
+  font-size:0.68rem;
+  color:var(--ink-faint);
+  display:block;
+  margin-top:0.35rem;
+}
 
 /* Source trail */
 .source-trail{
