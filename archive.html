@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Archive — Redline</title>
-<meta name="description" content="Every Redline filing, searchable by company, date, and category.">
+<meta name="description" content="Every Redline filing and App Watch report, searchable and sortable by company, date, and category.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
@@ -13,13 +13,13 @@
 <body>
 
 <div class="demo-banner">
-  <strong>REDLINE DOCKET</strong> — real, sourced filings, searchable below. This archive grows with each twice-monthly docket.
+  <strong>REDLINE DOCKET</strong> — every filing and App Watch report, in one searchable, sortable archive.
 </div>
 
 <header class="masthead">
   <div class="eyebrow">Archive</div>
   <h1><a href="index.html">REDLINE</a></h1>
-  <p class="sub">Every filing, searchable by company, category, and date.</p>
+  <p class="sub">Every filing and report, searchable and sortable by company, category, and date.</p>
 </header>
 
 <nav class="site-nav">
@@ -36,6 +36,17 @@
   <div class="search-row">
     <input type="text" id="archive-search" placeholder="Search by company or keyword…" aria-label="Search filings">
   </div>
+
+  <div style="display:flex; justify-content:flex-end; gap:0.5rem; align-items:center; padding:0.4rem 0 0.2rem; font-family:'Courier Prime', monospace; font-size:0.72rem; color:var(--ink-soft);">
+    <label for="archive-sort" style="text-transform:uppercase; letter-spacing:0.06em;">Sort:</label>
+    <select id="archive-sort" style="font-family:'Courier Prime', monospace; font-size:0.75rem; padding:0.35rem 0.6rem; border:1px solid var(--rule); background:var(--paper-dark); color:var(--ink);">
+      <option value="newest">Newest first</option>
+      <option value="oldest">Oldest first</option>
+      <option value="status">Status (Verified first)</option>
+      <option value="company">Company (A–Z)</option>
+    </select>
+  </div>
+
   <div class="filter-row" id="filter-row">
     <button class="active" data-category="all">All</button>
     <button data-category="arbitration">Arbitration</button>
@@ -43,11 +54,13 @@
     <button data-category="ai">AI / Training</button>
     <button data-category="privacy">Privacy</button>
     <button data-category="cancellation">Cancellation</button>
+    <button data-category="redesign">App Redesign</button>
+    <button data-category="ads">Ad Placement</button>
   </div>
 
   <div id="archive-list">
 
-  <article class="case-file" data-tab="Docket No. REDLINE-2026-001" data-category="arbitration fees ai" data-search="google ads arbitration ai inputs fees liability cap">
+  <article class="case-file" data-tab="Docket No. REDLINE-2026-001" data-category="arbitration fees ai" data-search="google ads arbitration ai inputs fees liability cap" data-date="2026-07-01" data-status="0" data-company="Google Ads">
     <div class="stamp">VERIFIED</div>
     <div class="case-head">
       <div>
@@ -66,7 +79,7 @@
     </div>
   </article>
 
-  <article class="case-file" data-tab="Docket No. REDLINE-2026-002" data-category="ai" data-search="adobe content license ai training generative firefly">
+  <article class="case-file" data-tab="Docket No. REDLINE-2026-002" data-category="ai" data-search="adobe content license ai training generative firefly" data-date="2024-06-18" data-status="0" data-company="Adobe">
     <div class="stamp">VERIFIED</div>
     <div class="case-head">
       <div>
@@ -85,7 +98,7 @@
     </div>
   </article>
 
-  <article class="case-file" data-tab="Docket No. REDLINE-2026-003" data-category="arbitration" data-search="discord arbitration dispute resolution opt-out">
+  <article class="case-file" data-tab="Docket No. REDLINE-2026-003" data-category="arbitration" data-search="discord arbitration dispute resolution opt-out" data-date="2026-05-12" data-status="1" data-company="Discord">
     <div class="stamp partial">PARTIALLY VERIFIED</div>
     <div class="case-head">
       <div>
@@ -97,6 +110,101 @@
     <div class="clause-label">Section — Dispute Resolution / Agreement to Arbitrate</div>
     <div class="redline">
       Discord's current terms retain mandatory arbitration for U.S. residents <ins>with a 30-day opt-out by email</ins>. The exact pre-May-2026 wording has not yet been independently retrieved by Redline.
+    </div>
+    <div class="case-footer">
+      <span>Status: Partially Verified</span>
+      <a href="index.html">View on docket &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="Docket No. REDLINE-2026-004" data-category="privacy ai" data-search="reddit llm data sharing privacy policy" data-date="2026-07-01" data-status="1" data-company="Reddit">
+    <div class="stamp partial">PARTIALLY VERIFIED</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">REDLINE-2026-004 &middot; LLM Data Sharing</div>
+        <h3><span class="company"><a href="https://www.reddit.com" target="_blank" rel="noopener">Reddit</a></span> — Privacy Policy</h3>
+      </div>
+      <div class="dates"><div>Effective: Jul 1, 2026</div></div>
+    </div>
+    <div class="clause-label">Section — How We Share Your Information</div>
+    <div class="redline">
+      The revised policy <ins>names "LLM providers who help us compile and summarize public content" as a recipient category</ins>, with no email, blog post, or announcement located marking the change.
+    </div>
+    <div class="case-footer">
+      <span>Status: Partially Verified</span>
+      <a href="index.html">View on docket &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="Docket No. REDLINE-2026-005" data-category="privacy ai" data-search="starlink ai training privacy policy opt-out" data-date="2026-01-15" data-status="1" data-company="Starlink">
+    <div class="stamp partial">PARTIALLY VERIFIED</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">REDLINE-2026-005 &middot; AI Training, Opt-Out Default</div>
+        <h3><span class="company"><a href="https://www.starlink.com" target="_blank" rel="noopener">Starlink</a></span> — Global Privacy Policy</h3>
+      </div>
+      <div class="dates"><div>Updated: Jan 15, 2026</div></div>
+    </div>
+    <div class="clause-label">Section — Third-Party Sharing / AI Model Training</div>
+    <div class="redline">
+      The January 2026 policy adds language permitting Starlink <ins>"to train our machine learning or artificial intelligence models"</ins>, unless the customer opts out. Reuters confirmed this was absent from an archived November 2025 version.
+    </div>
+    <div class="case-footer">
+      <span>Status: Partially Verified</span>
+      <a href="index.html">View on docket &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="Docket No. REDLINE-2026-006" data-category="ai" data-search="github copilot ai training default flip" data-date="2026-04-24" data-status="0" data-company="GitHub Copilot">
+    <div class="stamp">VERIFIED</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">REDLINE-2026-006 &middot; AI Training Default Flip</div>
+        <h3><span class="company"><a href="https://github.com/features/copilot" target="_blank" rel="noopener">GitHub Copilot</a></span> — Privacy Statement</h3>
+      </div>
+      <div class="dates"><div>Effective: Apr 24, 2026</div></div>
+    </div>
+    <div class="clause-label">Individual-plan interaction data</div>
+    <div class="redline">
+      Interaction data from individual Copilot plans <del>previously required opt-in consent to train AI models</del><ins>will be used to train and improve our AI models unless they opt out</ins>, effective April 24, 2026.
+    </div>
+    <div class="case-footer">
+      <span>Status: Verified</span>
+      <a href="index.html">View on docket &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="App Watch Report No. AW-2026-001" data-category="redesign" data-search="target liquid glass redesign ios app store" data-date="2026-08-06" data-status="1" data-company="Target">
+    <div class="stamp partial">PARTIALLY VERIFIED</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">AW-2026-001 &middot; App Watch Report</div>
+        <h3><span class="company"><a href="https://apps.apple.com/us/app/target-shop-style-save/id297430070" target="_blank" rel="noopener">Target</a></span> — iOS App Update</h3>
+      </div>
+      <div class="dates"><div>Released: Aug 6, 2026</div></div>
+    </div>
+    <div class="clause-label">App Store release notes</div>
+    <div class="redline">
+      Target's iOS app <del>previous interface</del><ins>received a refreshed look and feel built on Apple's "Liquid Glass" design language</ins>, per the company's own release notes.
+    </div>
+    <div class="case-footer">
+      <span>Status: Partially Verified</span>
+      <a href="index.html">View on docket &rarr;</a>
+    </div>
+  </article>
+
+  <article class="case-file" data-tab="App Watch Report No. AW-2026-002" data-category="ads redesign" data-search="doordash spotlight homepage ads banner" data-date="2026-06-08" data-status="1" data-company="DoorDash">
+    <div class="stamp partial">PARTIALLY VERIFIED</div>
+    <div class="case-head">
+      <div>
+        <div class="docket-no mono">AW-2026-002 &middot; App Watch Report</div>
+        <h3><span class="company"><a href="https://www.doordash.com" target="_blank" rel="noopener">DoorDash</a></span> — Consumer App Homepage</h3>
+      </div>
+      <div class="dates"><div>Announced: Jun 8, 2026</div></div>
+    </div>
+    <div class="clause-label">DoorDash Ads announcement — Ad surface change</div>
+    <div class="redline">
+      DoorDash's homepage <del>used standard banner ads</del><ins>now features "Spotlight," a large-format homepage ad unit, explicitly replacing the prior homepage banners</ins>.
     </div>
     <div class="case-footer">
       <span>Status: Partially Verified</span>
@@ -124,6 +232,8 @@
 <script>
   const searchInput = document.getElementById('archive-search');
   const filterRow = document.getElementById('filter-row');
+  const sortSelect = document.getElementById('archive-sort');
+  const list = document.getElementById('archive-list');
   const cards = Array.from(document.querySelectorAll('#archive-list .case-file'));
   const noResults = document.getElementById('no-results');
   let activeCategory = 'all';
@@ -143,6 +253,18 @@
     noResults.style.display = visibleCount === 0 ? 'block' : 'none';
   }
 
+  function applySort(){
+    const mode = sortSelect.value;
+    const sorted = cards.slice().sort((a, b) => {
+      if (mode === 'newest') return b.dataset.date.localeCompare(a.dataset.date);
+      if (mode === 'oldest') return a.dataset.date.localeCompare(b.dataset.date);
+      if (mode === 'status') return Number(a.dataset.status) - Number(b.dataset.status);
+      if (mode === 'company') return a.dataset.company.localeCompare(b.dataset.company);
+      return 0;
+    });
+    sorted.forEach(card => list.appendChild(card));
+  }
+
   filterRow.addEventListener('click', (e) => {
     const btn = e.target.closest('button');
     if (!btn) return;
@@ -153,6 +275,9 @@
   });
 
   searchInput.addEventListener('input', applyFilters);
+  sortSelect.addEventListener('change', applySort);
+
+  applySort();
 </script>
 
 </body>
