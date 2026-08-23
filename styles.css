@@ -284,6 +284,130 @@ main{
   font-size:0.66rem;
 }
 
+/* ---------- App Watch section ---------- */
+.app-watch-header{
+  max-width:1140px;
+  margin:3rem auto 1.5rem;
+  padding:0 1.5rem;
+}
+.app-watch-header .aw-eyebrow{
+  font-family:'Courier Prime', monospace;
+  font-size:0.7rem;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  border-top:1px solid var(--ink);
+  padding-top:0.8rem;
+}
+.app-watch-header h2{
+  font-family:'Libre Baskerville', Georgia, serif;
+  font-size:1.9rem;
+  margin:0.3rem 0 0.4rem;
+}
+.app-watch-header p{
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:1rem;
+  margin:0;
+  max-width:640px;
+}
+
+.badge-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.4rem;
+  margin:0.6rem 0 1rem;
+}
+.badge{
+  font-family:'Courier Prime', monospace;
+  font-size:0.64rem;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  border:1px solid var(--ink-soft);
+  padding:0.2rem 0.55rem;
+  color:var(--ink);
+}
+.badge.filled{
+  background:var(--ink);
+  color:var(--paper);
+  border-color:var(--ink);
+}
+.badge.thin{
+  border-style:dotted;
+  color:var(--ink-soft);
+}
+
+.before-after{
+  margin:1rem 0;
+  border:1px dashed var(--rule);
+  background:rgba(255,255,255,0.4);
+  padding:0.9rem 1rem;
+  font-family:'Courier Prime', monospace;
+  font-size:0.78rem;
+  color:var(--ink-soft);
+}
+.before-after strong{
+  color:var(--ink);
+  text-transform:uppercase;
+  font-size:0.68rem;
+  letter-spacing:0.06em;
+  display:block;
+  margin-bottom:0.2rem;
+}
+
+.evidence-level{
+  font-family:'Courier Prime', monospace;
+  font-size:0.75rem;
+  margin:0.6rem 0 1rem;
+  display:flex;
+  gap:0.4rem;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.evidence-level .el-label{
+  color:var(--ink-soft);
+  text-transform:uppercase;
+  font-size:0.66rem;
+  letter-spacing:0.06em;
+}
+
+.impact-badge{
+  font-family:'Courier Prime', monospace;
+  font-size:0.68rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  padding:0.2rem 0.6rem;
+  display:inline-block;
+}
+.impact-badge.low{ border:1px dotted var(--ink-soft); color:var(--ink-soft); }
+.impact-badge.medium{ border:1px solid var(--ink); color:var(--ink); }
+.impact-badge.high{ border:2px double var(--ink); color:var(--ink); font-weight:700; }
+
+.know-block{
+  margin:1rem 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+.know-block > div{
+  border-left:3px solid var(--rule);
+  padding:0.6rem 0.8rem;
+  background:rgba(255,255,255,0.35);
+}
+.know-block strong{
+  font-family:'Courier Prime', monospace;
+  font-size:0.68rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--ink);
+  display:block;
+  margin-bottom:0.3rem;
+}
+.know-block p{ font-size:0.9rem; margin:0; color:var(--ink-soft); }
+@media (max-width:600px){
+  .know-block{ grid-template-columns:1fr; }
+}
+
 .clause-label{
   font-family:'Courier Prime', monospace;
   font-size:0.7rem;
