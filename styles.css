@@ -259,6 +259,13 @@ main{
   text-transform:none;
   margin-top:0.2em;
 }
+.status-clarify{
+  font-family:'Courier Prime', monospace;
+  font-size:0.66rem;
+  color:var(--ink-faint);
+  text-align:right;
+  margin-top:0.3rem;
+}
 .stamp.demo{
   border-style:dashed;
 }
