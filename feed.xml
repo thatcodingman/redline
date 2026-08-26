@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Redline — Terms of Service, Amended</title>
+  <link>https://redlinedocket.com/</link>
+  <description>The terms of service changes companies didn't put in a headline. Filed twice monthly.</description>
+  <language>en-us</language>
+  <atom:link href="https://redlinedocket.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+  <item>
+    <title>T-Mobile: Arbitration Opt-Out Removed (REDLINE-2026-007)</title>
+    <link>https://redlinedocket.com/index.html#REDLINE-2026-007</link>
+    <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-007</guid>
+    <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+    <description>T-Mobile's Terms &amp; Conditions effective September 1, 2026 removed the 30-day arbitration opt-out present in the version effective August 1, 2025, confirmed by direct word-for-word document comparison. Status: Verified.</description>
+  </item>
+
+  <item>
+    <title>Target: Liquid Glass App Redesign (AW-2026-001)</title>
+    <link>https://redlinedocket.com/index.html#AW-2026-001</link>
+    <guid isPermaLink="false">redlinedocket.com/AW-2026-001</guid>
+    <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+    <description>Target's iOS app adopted Apple's Liquid Glass design system on Aug 6, 2026 — likely OS-mandated compliance rather than a discretionary redesign. Status: Partially Verified. App Watch report.</description>
+  </item>
+
+  <item>
+    <title>DoorDash: Spotlight Replaces Homepage Banners (AW-2026-002)</title>
+    <link>https://redlinedocket.com/index.html#AW-2026-002</link>
+    <guid isPermaLink="false">redlinedocket.com/AW-2026-002</guid>
+    <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+    <description>DoorDash introduced "Spotlight," a large homepage ad format explicitly replacing prior banners, reporting 2x the click-through rate in early testing. Status: Partially Verified. App Watch report.</description>
+  </item>
+
+  <item>
+    <title>Adobe: Content License &amp; AI Training Clarification (REDLINE-2026-002)</title>
+    <link>https://redlinedocket.com/index.html#REDLINE-2026-002</link>
+    <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-002</guid>
+    <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+    <description>Adobe's June 2024 Terms of Use update sparked backlash over AI-training language; a revised version added an explicit no-training statement. Status: Verified.</description>
+  </item>
+
+  <item>
+    <title>Reddit: LLM Data Sharing Added to Privacy Policy (REDLINE-2026-004)</title>
+    <link>https://redlinedocket.com/index.html#REDLINE-2026-004</link>
+    <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-004</guid>
+    <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+    <description>Reddit's May 2026 Privacy Policy revision added an LLM-provider sharing clause, with no notice found anywhere. Status: Partially Verified.</description>
+  </item>
+
+  <item>
+    <title>Starlink: AI Training Added, Opt-Out Default (REDLINE-2026-005)</title>
+    <link>https://redlinedocket.com/index.html#REDLINE-2026-005</link>
+    <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-005</guid>
+    <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+    <description>Starlink's Jan 2026 Privacy Policy update added an opt-out AI-training clause, confirmed absent from a Reuters-reviewed Nov 2025 archive. Status: Partially Verified.</description>
+  </item>
+
+  <item>
+    <title>GitHub Copilot: AI Training Default Flip (REDLINE-2026-006)</title>
+    <link>https://redlinedocket.com/index.html#REDLINE-2026-006</link>
+    <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-006</guid>
+    <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+    <description>Individual Copilot plans flipped from opt-in to opt-out AI training by default, effective Apr 24, 2026. Status: Verified.</description>
+  </item>
+
+  <item>
+    <title>Discord: Arbitration Clause Update (REDLINE-2026-003)</title>
+    <link>https://redlinedocket.com/index.html#REDLINE-2026-003</link>
+    <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-003</guid>
+    <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+    <description>A May 2026 revision to Discord's arbitration clause was flagged by a third-party tracker; current terms confirmed directly, prior wording not yet diffed. Status: Partially Verified.</description>
+  </item>
+
+  <item>
+    <title>Google Ads: Arbitration, AI Inputs &amp; Fees Overhaul (REDLINE-2026-001)</title>
+    <link>https://redlinedocket.com/index.html#REDLINE-2026-001</link>
+    <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-001</guid>
+    <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+    <description>Google Ads' first Terms of Service overhaul since 2018 adds AI-input usage, arbitration, and pass-through fee provisions, effective Jul 1, 2026. Status: Verified.</description>
+  </item>
+
+</channel>
+</rss>
