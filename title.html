@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTFSN95XB7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-VTFSN95XB7");
+</script>
+<meta charset="UTF-8">
+<title id="pageTitle">Title — StaticReel</title>
+<meta id="pageDesc" name="description" content="Streaming status, verification, and change history tracked by StaticReel.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" id="pageCanonical" href="https://staticreel.com/title.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StaticReel">
+<meta id="ogTitle" property="og:title" content="StaticReel">
+<meta property="og:image" content="https://staticreel.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void:#0A0C0F;
+    --panel:#14171C;
+    --panel-2:#1B1F26;
+    --line:#262B33;
+    --text:#ECEEF1;
+    --text-mid:#A6ACB6;
+    --text-dim:#5E6570;
+    --signal:#00E5C7;
+    --signal-dim:#0B4A44;
+    --warn:#F5A623;
+    --font-display:'Space Grotesk',sans-serif;
+    --font-body:'Inter',sans-serif;
+    --font-mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--void);color:var(--text);font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
+  a{color:var(--signal);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 32px;}
+  .nav{position:sticky;top:0;z-index:50;background:rgba(10,12,15,0.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:1180px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-family:var(--font-display);font-weight:700;font-size:19px;letter-spacing:0.02em;display:flex;align-items:center;gap:9px;color:var(--text);text-decoration:none;}
+  .logo-dot{width:8px;height:8px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 3px var(--signal-dim);}
+  .nav-links{display:flex;gap:30px;font-size:14px;color:var(--text-mid);}
+  .nav-links a{color:var(--text-mid);}
+  .nav-links a:hover{color:var(--text);text-decoration:none;}
+  .back-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:12.5px;
+    color:var(--text-dim);margin:28px 0 0;}
+  .back-link:hover{color:var(--text-mid);text-decoration:none;}
+  .title-head{display:flex;gap:24px;padding:24px 0 32px;border-bottom:1px solid var(--line);align-items:flex-start;}
+  .title-poster{width:140px;height:210px;border-radius:8px;overflow:hidden;flex:0 0 auto;background:var(--panel);
+    display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;
+    font-size:15px;color:var(--text-dim);border:1px solid var(--line);}
+  .title-poster img{width:100%;height:100%;object-fit:cover;}
+  .title-info{flex:1;min-width:0;}
+  .plat-pill{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:12px;
+    color:var(--text-mid);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px;}
+  .plat-pill .dot{width:8px;height:8px;border-radius:50%;}
+  h1{font-family:var(--font-display);font-weight:700;font-size:28px;margin:0 0 12px;line-height:1.2;}
+  .status-line{font-family:var(--font-mono);font-size:13px;color:var(--text-mid);margin:0 0 6px;}
+  .status-line.urgent{color:var(--warn);}
+  .tag-pill{font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.04em;
+    color:var(--text-dim);border:1px solid var(--line);padding:2px 8px;border-radius:4px;}
+
+  .section{padding:32px 0;border-bottom:1px solid var(--line);}
+  .section:last-child{border-bottom:none;}
+  .section-title{font-family:var(--font-display);font-weight:700;font-size:16px;margin:0 0 16px;
+    text-transform:uppercase;letter-spacing:0.04em;color:var(--text-mid);}
+
+  .verify-block{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .verify-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:14px;}
+  .verify-row:last-child{margin-bottom:0;}
+  .verify-row b{color:var(--text-dim);font-family:var(--font-mono);font-size:11px;text-transform:uppercase;
+    letter-spacing:0.05em;min-width:110px;font-weight:500;}
+  .status-badge{font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;
+    padding:3px 9px;border-radius:4px;font-weight:700;}
+  .status-badge.verified{color:var(--signal);border:1px solid var(--signal);}
+  .status-badge.unconfirmed{color:var(--warn);border:1px solid var(--warn);}
+
+  .history-list{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--panel);}
+  .history-item{padding:16px 20px;border-bottom:1px solid var(--line);}
+  .history-item:last-child{border-bottom:none;}
+  .history-date{font-family:var(--font-mono);font-size:12px;color:var(--signal);margin-bottom:4px;}
+  .history-text{font-size:14px;color:var(--text);margin:0 0 4px;}
+  .history-source{font-family:var(--font-mono);font-size:11.5px;color:var(--text-dim);}
+  .history-source a{color:var(--text-dim);}
+
+  .about-meta{font-family:var(--font-mono);font-size:12.5px;color:var(--signal);margin:0 0 14px;}
+  .about-overview{font-size:14.5px;color:var(--text-mid);line-height:1.7;margin:0 0 14px;}
+  .about-cast{font-size:13.5px;color:var(--text-mid);margin:0;}
+  .about-cast b{color:var(--text-dim);font-family:var(--font-mono);font-size:11px;text-transform:uppercase;
+    letter-spacing:0.05em;font-weight:500;margin-right:6px;}
+
+  .empty-note{color:var(--text-dim);font-size:13.5px;font-family:var(--font-mono);}
+
+  footer{padding:36px 0 60px;color:var(--text-dim);font-size:12.5px;font-family:var(--font-mono);border-top:1px solid var(--line);
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;max-width:1180px;margin:0 auto;padding-left:32px;padding-right:32px;}
+  .footer-links{display:flex;gap:18px;}
+  .footer-links a{color:var(--text-dim);}
+  .footer-links a:hover{color:var(--text-mid);}
+
+  @media (max-width:700px){
+    .title-head{flex-direction:column;}
+    .title-poster{width:120px;height:180px;}
+    h1{font-size:22px;}
+    .nav-links{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html"><span class="logo-dot"></span>STATICREEL</a>
+    <div class="nav-links">
+      <a href="index.html#this-week">This week</a>
+      <a href="index.html#leaving">Leaving</a>
+      <a href="index.html#added">Added</a>
+      <a href="explore.html">Explore</a>
+      <a href="index.html#log">Log</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <a class="back-link" href="index.html">← Back to StaticReel</a>
+
+  <div id="titleContent"></div>
+</div>
+
+<footer>
+  <span>StaticReel · homepage concept, interactive preview · not affiliated with Netflix, Max, Disney+ or Amazon · title artwork provided by <a href="https://www.themoviedb.org/" target="_blank" rel="noopener" style="color:var(--text-dim);">TMDB</a>, not endorsed or certified by TMDB</span>
+  <span class="footer-links"><a href="report.html">Report an issue</a><a href="rss.xml">RSS</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></span>
+</footer>
+
+<script src="data.js"></script>
+<script>
+function eventLabel(ev){
+  return `${eventTypeLabel(ev.type)} ${formatDate(ev.date)}`;
+}
+
+function statusTierOf(ev){
+  return ev.status || 'verified';
+}
+
+function injectBaselineStructuredData(record){
+  // Fires immediately with what we already know — no waiting on TMDB/OMDb.
+  // Ensures a crawler that snapshots the page early still sees valid schema.
+  const p = PLATFORMS[record.plat];
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: record.title,
+    url: `https://staticreel.com/title.html?t=${record.slug}`,
+    provider: { '@type': 'Organization', name: p.name }
+  };
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.id = 'structured-data';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
+function renderTitlePage(){
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('t');
+  const record = slug ? TITLES[slug] : null;
+  const container = document.getElementById('titleContent');
+
+  if(!record){
+    container.innerHTML = `
+      <div class="section">
+        <h1>Title not found</h1>
+        <p class="empty-note">We don't have a page for this title yet. <a href="index.html">Back to the homepage</a> to browse this week's changes.</p>
+      </div>`;
+    document.title = 'Title not found — StaticReel';
+    return;
+  }
+
+  injectBaselineStructuredData(record);
+
+  const p = PLATFORMS[record.plat];
+  const latest = record.events[record.events.length - 1];
+  const isLeavingLatest = latest.type === 'leaving';
+  const days = isLeavingLatest ? daysUntil(latest.date) : null;
+  const urgent = isLeavingLatest && days >= 0 && days <= 7;
+
+  let statusLine;
+  if(isLeavingLatest){
+    let countdown;
+    if(days > 1) countdown = `Leaves in ${days} days`;
+    else if(days === 1) countdown = 'Leaves tomorrow';
+    else if(days === 0) countdown = 'Leaving today';
+    else countdown = `Left ${p.name}`;
+    statusLine = `${countdown} · ${formatDate(latest.date)}`;
+  } else if(latest.type === 'added'){
+    const addedLine = isScheduled(latest) ? `Scheduled to arrive on ${p.name}` : (isAddedThisWeek(latest) ? `Added to ${p.name} this week` : `Added to ${p.name}`);
+    statusLine = `${addedLine} · ${formatDate(latest.date)}`;
+  } else {
+    statusLine = latest.text ? latest.text.replace(/<\/?b>/g,'').replace(/<a[^>]*>|<\/a>/g,'') : `${eventTypeLabel(latest.type)} — ${formatDate(latest.date)}`;
+  }
+
+  document.title = `${record.title} — StaticReel`;
+  document.getElementById('pageDesc').setAttribute('content', `${record.title} on ${p.name} — current status, verification, and change history tracked by StaticReel.`);
+  document.getElementById('pageCanonical').setAttribute('href', `https://staticreel.com/title.html?t=${record.slug}`);
+  document.getElementById('ogTitle').setAttribute('content', `${record.title} — StaticReel`);
+
+  const verifyRows = record.events.map(ev=>{
+    const t = statusTierOf(ev);
+    const label = t==='verified' ? 'Verified' : t==='corroborated' ? 'Corroborated' : 'Unconfirmed';
+    const badgeClass = t==='verified' ? 'verified' : 'unconfirmed';
+    const sourceBit = ev.source
+      ? (ev.sourceUrl ? `<a href="${ev.sourceUrl}" target="_blank" rel="noopener">${ev.source} →</a>` : ev.source)
+      : 'No source on file';
+    return `<div class="verify-row"><b>${eventLabel(ev)}</b><span class="status-badge ${badgeClass}">${label}</span><span style="color:var(--text-mid);font-size:13px;">${sourceBit}</span></div>`;
+  }).join('');
+
+  const historyItems = record.events.slice().reverse().map(ev=>{
+    const t = statusTierOf(ev);
+    const label = t==='verified' ? 'Verified' : t==='corroborated' ? 'Corroborated' : 'Unconfirmed';
+    const sourceBit = ev.sourceUrl
+      ? `<a href="${ev.sourceUrl}" target="_blank" rel="noopener">${ev.source} →</a>`
+      : (ev.source || 'No source on file');
+    const mainLine = ev.text
+      ? ev.text.replace(/<\/?b>/g,'').replace(/<a[^>]*>|<\/a>/g,'')
+      : `${eventTypeLabel(ev.type)} on ${p.name}`;
+    const whyLine = ev.why ? `<p class="history-text" style="color:var(--text-mid);font-size:13px;margin-top:6px;">${ev.why}</p>` : '';
+    return `<div class="history-item">
+      <div class="history-date">${formatDate(ev.date)}</div>
+      <p class="history-text">${mainLine} — ${label}</p>
+      ${whyLine}
+      <div class="history-source">${sourceBit}${ev.verified ? ' · verified '+ev.verified : ''}</div>
+    </div>`;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="title-head">
+      <div class="title-poster" id="titlePoster">${record.title.split(' ').slice(0,2).map(w=>w[0]).join('')}</div>
+      <div class="title-info">
+        <div class="plat-pill">${dot(p.color)}<a href="${p.page}" style="color:inherit;">${p.name}</a> <span class="tag-pill">${record.events.length > 1 ? record.events.length+' tracked events' : '1 tracked event'}</span></div>
+        <h1>${record.title}</h1>
+        <p class="status-line ${urgent?'urgent':''}">${statusLine}</p>
+      </div>
+    </div>
+
+    <div class="section" id="aboutSection" style="display:none;">
+      <h2 class="section-title">About this title</h2>
+      <div id="aboutContent"></div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Verification</h2>
+      <div class="verify-block">${verifyRows}</div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Change history</h2>
+      <div class="history-list">${historyItems}</div>
+      <p class="empty-note" style="margin-top:12px;">This is everything StaticReel has on file for this title as of the ${LAST_VERIFICATION_DATE} research pass. Future changes will be added here rather than overwriting this record.</p>
+    </div>
+  `;
+
+  Promise.all([fetchTitleDetails(record.title), fetchOMDbRatings(record.title)]).then(([details, omdb])=>{
+    if(details && details.posterUrl){
+      document.getElementById('titlePoster').innerHTML = `<img src="${details.posterUrl}" alt="${record.title.replace(/"/g,'&quot;')} poster">`;
+    }
+    const bits = [];
+    if(details){
+      if(details.year) bits.push(details.year);
+      if(details.genres.length) bits.push(details.genres.join(', '));
+      if(details.rating) bits.push(`TMDB ★ ${details.rating}/10`);
+    }
+    if(omdb){
+      if(omdb.imdbRating) bits.push(`IMDb ★ ${omdb.imdbRating}/10`);
+      if(omdb.rtScore) bits.push(`RT ${omdb.rtScore}`);
+    }
+    const hasContent = (details && (details.overview || details.cast.length)) || bits.length;
+    if(hasContent){
+      const metaLine = bits.length ? `<p class="about-meta">${bits.join(' · ')}</p>` : '';
+      const overviewLine = (details && details.overview) ? `<p class="about-overview">${details.overview}</p>` : '';
+      const castLine = (details && details.cast.length) ? `<p class="about-cast"><b>Starring:</b> ${details.cast.join(', ')}</p>` : '';
+      document.getElementById('aboutContent').innerHTML = metaLine + overviewLine + castLine;
+      document.getElementById('aboutSection').style.display = 'block';
+    }
+
+    if(details){
+      injectStructuredData(record, details, omdb);
+    }
+  });
+}
+
+function injectStructuredData(record, details, omdb){
+  const schemaType = details.mediaType === 'tv' ? 'TVSeries' : 'Movie';
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': schemaType,
+    name: record.title,
+    url: `https://staticreel.com/title.html?t=${record.slug}`
+  };
+  if(details.posterUrl) schema.image = details.posterUrl;
+  if(details.overview) schema.description = details.overview;
+  if(details.genres.length) schema.genre = details.genres;
+  if(details.releaseDate) schema.datePublished = details.releaseDate;
+  if(details.cast.length){
+    schema.actor = details.cast.map(name => ({ '@type': 'Person', name }));
+  }
+  let primaryRating = null;
+  if(omdb && omdb.imdbRating){
+    primaryRating = { '@type': 'AggregateRating', ratingValue: omdb.imdbRating, bestRating: '10', ratingCount: details.voteCount || 1 };
+  } else if(details.rating){
+    primaryRating = { '@type': 'AggregateRating', ratingValue: details.rating, bestRating: '10', ratingCount: details.voteCount || 1 };
+  }
+  if(primaryRating) schema.aggregateRating = primaryRating;
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+
+  // Replace the baseline schema rather than adding a second, conflicting one
+  const existing = document.getElementById('structured-data');
+  if(existing) existing.remove();
+  script.id = 'structured-data';
+  document.head.appendChild(script);
+}
+
+renderTitlePage();
+</script>
+
+</body>
+</html>
