@@ -175,6 +175,16 @@ main{
   margin-top:2.4rem;
   padding:2rem 2.2rem 1.8rem;
   box-shadow:0 1px 0 rgba(0,0,0,0.04);
+  transition:border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.case-file:target{
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(140,109,47,0.25);
+  animation:target-flash 2.2s ease-out;
+}
+@keyframes target-flash{
+  0%{ box-shadow:0 0 0 6px rgba(140,109,47,0.4); }
+  100%{ box-shadow:0 0 0 3px rgba(140,109,47,0.25); }
 }
 .case-file::before{
   content:attr(data-tab);
