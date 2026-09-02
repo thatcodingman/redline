@@ -200,8 +200,9 @@ main{
 }
 .case-head .docket-no{
   font-family:'Courier Prime', monospace;
-  font-size:0.78rem;
-  color:var(--ink-soft);
+  font-size:0.85rem;
+  color:var(--ink);
+  font-weight:700;
 }
 .case-head h3{
   margin:0.3rem 0 0;
@@ -479,6 +480,55 @@ main{
 }
 .redline del::before{ content:"DEL"; color:var(--ink-faint); border-color:var(--ink-faint); }
 .redline ins::before{ content:"ADD"; color:var(--ink); }
+
+/* Before/After text grid — filing-page restructure */
+.ba-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+  margin:0.8rem 0 1.2rem;
+}
+.ba-grid .ba-box{
+  border:1px solid var(--rule);
+  padding:0.9rem 1rem;
+  background:rgba(255,255,255,0.4);
+}
+.ba-grid .ba-box.before{
+  border-left:3px solid var(--ink-faint);
+}
+.ba-grid .ba-box.after{
+  border-left:3px solid var(--ink);
+}
+.ba-grid .ba-box-label{
+  font-family:'Courier Prime', monospace;
+  font-size:0.66rem;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  margin-bottom:0.4rem;
+  display:block;
+}
+.ba-grid .before .ba-box-label{ color:var(--ink-faint); }
+.ba-grid .after .ba-box-label{ color:var(--ink); font-weight:700; }
+.ba-grid .ba-box p{
+  margin:0;
+  font-size:0.98rem;
+}
+.ba-grid .before p{ color:var(--ink-soft); }
+.ba-grid .after p{ color:var(--ink); font-weight:600; }
+@media (max-width:600px){
+  .ba-grid{ grid-template-columns:1fr; }
+}
+
+.who-notice-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+  margin:0.8rem 0 1.2rem;
+}
+.who-notice-row .wn-box .clause-label{ margin-top:0; }
+@media (max-width:600px){
+  .who-notice-row{ grid-template-columns:1fr; }
+}
 
 /* WHAT CHANGED / WHY IT MATTERS split */
 .finding{
