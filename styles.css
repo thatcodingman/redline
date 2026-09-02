@@ -5,6 +5,8 @@
   --ink-soft: #5C5748;
   --ink-faint: #8A8471;
   --rule: #C9BFA0;
+  --gold: #8C6D2F;
+  --gold-dark: #6B5222;
 }
 
 *{box-sizing:border-box;}
@@ -556,6 +558,39 @@ main{
 .source-trail li .unavailable{
   color:var(--ink-faint);
   font-style:italic;
+}
+
+/* Related Filings — larger variant, this is primary navigation, not fine-print metadata */
+.source-trail.related-filings{
+  border-top:2px solid var(--gold);
+  padding-top:1.1rem;
+  margin-top:1.4rem;
+}
+.source-trail.related-filings .st-label{
+  font-size:1.05rem;
+  color:var(--gold);
+  font-weight:700;
+  margin-bottom:0.7rem;
+}
+.source-trail.related-filings ul{
+  display:block;
+}
+.source-trail.related-filings li{
+  font-size:1.15rem;
+  font-family:'Libre Baskerville', Georgia, serif;
+  color:var(--ink);
+  line-height:1.5;
+}
+.source-trail.related-filings li a{
+  font-family:'Courier Prime', monospace;
+  font-size:1.15rem;
+  font-weight:700;
+  color:var(--gold);
+  border-bottom:2px solid var(--gold);
+}
+.source-trail.related-filings li a:hover{
+  color:var(--gold-dark);
+  border-bottom-color:var(--gold-dark);
 }
 
 .case-footer{
