@@ -5,7 +5,6 @@
   <link>https://redlinedocket.com/</link>
   <description>The terms of service changes companies didn't put in a headline. Filed twice monthly.</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 12 Oct 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://redlinedocket.com/feed.xml" rel="self" type="application/rss+xml"/>
 
   <item>
@@ -25,27 +24,27 @@
   </item>
 
   <item>
+    <title>LinkedIn: AI Training Expanded to More Regions (REDLINE-2026-008)</title>
+    <link>https://redlinedocket.com/filings/linkedin-ai-training-region-expansion.html</link>
+    <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-008</guid>
+    <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+    <description>Effective Nov 3, 2025, LinkedIn uses member data in the EEA, UK, Switzerland, Canada and Hong Kong to train generative AI, opt-out by default. Status: Partially Verified.</description>
+  </item>
+
+  <item>
+    <title>PayPal &amp; Venmo: Cross-Platform Contact Discovery On by Default (REDLINE-2026-009)</title>
+    <link>https://redlinedocket.com/filings/paypal-venmo-contact-discovery-default-on.html</link>
+    <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-009</guid>
+    <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+    <description>From Nov 17, 2025, PayPal and Venmo users can be found and paid across platforms by phone number, visible by default unless Privacy settings change. Status: Verified.</description>
+  </item>
+
+  <item>
     <title>Adobe: Full General Terms Replacement (REDLINE-2026-010)</title>
     <link>https://redlinedocket.com/filings/adobe-general-terms-replacement-2025.html</link>
     <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-010</guid>
     <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
     <description>Adobe replaced its entire General Terms of Use on Oct 3, 2025, adding Section 17 barring customers from training competing AI/ML systems on Adobe outputs, among other provisions. Status: Partially Verified.</description>
-  </item>
-
-  <item>
-    <title>PayPal / Venmo: Cross-Platform Contact Discovery (REDLINE-2026-009)</title>
-    <link>https://redlinedocket.com/filings/paypal-venmo-contact-discovery-default-on.html</link>
-    <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-009</guid>
-    <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
-    <description>Effective Nov 17, 2025, Venmo and PayPal accounts can be found and paid across platforms by phone number, discoverable by default unless Privacy settings are changed. Status: Verified.</description>
-  </item>
-
-  <item>
-    <title>LinkedIn: AI Training Expanded to More Regions (REDLINE-2026-008)</title>
-    <link>https://redlinedocket.com/filings/linkedin-ai-training-region-expansion.html</link>
-    <guid isPermaLink="false">redlinedocket.com/REDLINE-2026-008</guid>
-    <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
-    <description>Effective Nov 3, 2025, LinkedIn expanded generative AI training on member profile data and public content to the EEA, Switzerland, UK, Canada, and Hong Kong, opt-out by default. Status: Partially Verified.</description>
   </item>
 
   <item>
