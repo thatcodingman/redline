@@ -70,10 +70,6 @@
 </head>
 <body>
 
-<div class="demo-banner">
-  <strong>EDITORIAL DEMONSTRATION</strong> — the address below is a placeholder; update it before launch.
-</div>
-
 <header class="masthead">
   <div class="eyebrow">Contact</div>
   <h1><a href="index.html">REDLINE</a></h1>
@@ -104,11 +100,31 @@
   <h2>Filing tips</h2>
   <p>Use <a href="submit.html">Submit a Filing</a> — it captures the details Redline needs to verify a change (company, current policy link, approximate date, and what you noticed).</p>
 
-  <h2>Corrections</h2>
-  <p>If something on a filing is wrong — a date, a quoted clause, a source link — email <span class="mono">corrections@redline.example</span> with the docket number. Corrections are the fastest way to keep this site trustworthy; they're taken seriously.</p>
+  <h2>Corrections, press &amp; everything else</h2>
+  <p>If something on a filing is wrong — a date, a quoted clause, a source link — include the docket number below. Corrections are the fastest way to keep this site trustworthy; they're taken seriously.</p>
 
-  <h2>Press &amp; everything else</h2>
-  <p>Reach Redline at <span class="mono">press@redline.example</span>.</p>
+  <form class="filing-form" name="contact" method="POST" action="/message-received.html" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    <p class="signup-hp"><label>Leave this empty: <input name="bot-field"></label></p>
+
+    <label for="contact-name">Name (optional)</label>
+    <input type="text" id="contact-name" name="name" placeholder="Optional">
+
+    <label for="contact-email">Your email</label>
+    <input type="email" id="contact-email" name="email" required placeholder="you@example.com">
+
+    <label for="contact-reason">What's this about?</label>
+    <select id="contact-reason" name="reason">
+      <option value="correction">Correction to a filing</option>
+      <option value="press">Press inquiry</option>
+      <option value="other">Something else</option>
+    </select>
+
+    <label for="contact-message">Message</label>
+    <textarea id="contact-message" name="message" required placeholder="If this is about a specific filing, include the docket number."></textarea>
+
+    <button type="submit">Send message</button>
+  </form>
 </div>
 </main>
 

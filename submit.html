@@ -70,10 +70,6 @@
 </head>
 <body>
 
-<div class="demo-banner">
-  <strong>EDITORIAL DEMONSTRATION</strong> — this form is not yet connected to a working inbox. See the note below the form.
-</div>
-
 <header class="masthead">
   <div class="eyebrow">Submit a Filing</div>
   <h1><a href="index.html">REDLINE</a></h1>
@@ -101,7 +97,10 @@
 <div class="page-content">
   <p class="lede">You don't need proof — just a tip. Redline will locate the prior version, verify the change, and date it before anything is published. See <a href="methodology.html">Methodology</a> for the full process.</p>
 
-  <form class="filing-form" action="mailto:tips@redline.example" method="post" enctype="text/plain">
+  <form class="filing-form" name="filing-tip" method="POST" action="/filing-tip-received.html" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="filing-tip">
+    <p class="signup-hp"><label>Leave this empty: <input name="bot-field"></label></p>
+
     <label for="company">Company name</label>
     <input type="text" id="company" name="company" required placeholder="e.g. Nimbus Cloud Storage">
 
@@ -121,7 +120,7 @@
     <button type="submit">Submit filing tip</button>
   </form>
 
-  <p class="form-note">This form currently opens the visitor's email client via a <code>mailto:</code> action — it has no backend yet. Before launch, wire it to a real inbox or a form service (Formspree, a serverless function, etc.) so submissions don't depend on the visitor having a configured mail client.</p>
+  <p class="form-note">Submissions go straight to Redline — no email client required.</p>
 </div>
 </main>
 
