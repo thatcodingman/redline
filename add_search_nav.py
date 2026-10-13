@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """
 Adds the "Search" nav link to every <nav>...</nav> block sitewide that has
-a Stats link but is missing search.html. Idempotent - skips any nav block
-that already has search.html. Run from the redline project root.
+a Stats link but is missing search.html. Handles both relative
+(href="stats.html") and absolute (href="/stats.html") link styles, since
+different pages on this site use different conventions. Idempotent -
+skips any nav block that already has search.html / /search.html. Run
+from the redline project root.
 
 Usage:
     python3 add_search_nav.py
@@ -11,7 +14,7 @@ import re
 import glob
 
 STATS_RE = re.compile(
-    r'([ \t]*)(<a href="stats\.html"[^>]*>Stats</a>)(\r?\n)'
+    r'([ \t]*)(<a href="/?stats\.html"[^>]*>Stats</a>)(\r?\n)'
 )
 NAV_BLOCK_RE = re.compile(r'<nav\b[^>]*>.*?</nav>', re.DOTALL)
 
@@ -21,8 +24,6 @@ TARGET_GLOBS = [
     "companies/*.html",
     "topics/*.html",
 ]
-# search.html is built fresh with the link already in place - skip it,
-# and skip the StaticReel-era stray file if it somehow still exists.
 SKIP_FILES = {"search.html"}
 
 
@@ -35,7 +36,10 @@ def patch_nav_block(block_text):
         return block_text, False
 
     indent, stats_tag, newline = m.groups()
-    insertion = f'{indent}<a href="search.html">Search</a>{newline}'
+    # match this page's own convention: absolute if the Stats link was
+    # absolute, relative otherwise
+    href = "/search.html" if '"/stats.html"' in stats_tag else "search.html"
+    insertion = f'{indent}<a href="{href}">Search</a>{newline}'
     new_block = block_text[: m.end()] + insertion + block_text[m.end():]
     return new_block, True
 
