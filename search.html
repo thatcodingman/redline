@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search — Redline</title>
+<meta name="description" content="Search Redline's filings by company, topic, or keyword.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HB233PWMNE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-HB233PWMNE");
+</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Redline">
+<meta property="og:title" content="Search — Redline">
+<meta property="og:description" content="Search Redline's filings by company, topic, or keyword.">
+<meta property="og:image" content="https://redlinedocket.com/og-image.jpg">
+<meta property="og:url" content="https://redlinedocket.com/search.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Search — Redline">
+<meta name="twitter:description" content="Search Redline's filings by company, topic, or keyword.">
+<meta name="twitter:image" content="https://redlinedocket.com/og-image.jpg">
+<link rel="canonical" href="https://redlinedocket.com/search.html">
+<link rel="alternate" type="application/rss+xml" title="Redline Docket" href="/feed.xml">
+<meta name="robots" content="noindex, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Redline",
+  "url": "https://redlinedocket.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Redline",
+    "url": "https://redlinedocket.com/",
+    "logo": "https://redlinedocket.com/favicon-512.png"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Search — Redline",
+  "description": "Search Redline's filings by company, topic, or keyword.",
+  "url": "https://redlinedocket.com/search.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Redline",
+    "url": "https://redlinedocket.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Redline",
+    "url": "https://redlinedocket.com/",
+    "logo": "https://redlinedocket.com/favicon-512.png"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="eyebrow">Search</div>
+  <h1><a href="index.html">REDLINE</a></h1>
+  <p class="sub">Find a filing by company, topic, or keyword.</p>
+</header>
+
+<nav class="site-nav">
+  <a href="index.html">Docket</a>
+  <a href="archive.html">Archive</a>
+  <a href="companies.html">Companies</a>
+  <a href="topics.html">Topics</a>
+  <a href="stats.html">Stats</a>
+  <a href="search.html" aria-current="page">Search</a>
+  <a href="about.html">About</a>
+  <a href="methodology.html">Methodology</a>
+  <a href="submit.html">Submit a Filing</a>
+  <a href="contact.html">Contact</a>
+  <a href="terms.html">Terms</a>
+</nav>
+
+<main>
+<div class="page-content">
+
+  <p class="lede">Search across every filing on the docket by company name, topic, or keyword from the headline.</p>
+
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Try &quot;Adobe&quot;, &quot;arbitration&quot;, or &quot;AI training&quot;&hellip;" autocomplete="off">
+  </div>
+
+  <p class="search-meta mono" id="search-meta"></p>
+
+  <div id="search-results"></div>
+
+</div>
+</main>
+
+<footer>
+  <nav>
+    <a href="archive.html">Archive</a>
+    <a href="companies.html">Companies</a>
+    <a href="topics.html">Topics</a>
+    <a href="stats.html">Stats</a>
+    <a href="search.html">Search</a>
+    <a href="about.html">About</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="submit.html">Submit a Filing</a>
+    <a href="contact.html">Contact</a>
+  <a href="terms.html">Terms</a>
+  </nav>
+  <p>Redline verifies changes against archived and current Terms of Service documents, but cannot guarantee complete accuracy and is not responsible for errors in tracking or reporting. Not legal advice. Filed twice monthly.</p>
+</footer>
+
+<script src="search-data.js"></script>
+<script>
+(function () {
+  var input = document.getElementById("search-input");
+  var meta = document.getElementById("search-meta");
+  var results = document.getElementById("search-results");
+  var index = (typeof SEARCH_INDEX !== "undefined") ? SEARCH_INDEX : [];
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function render(query) {
+    var q = query.trim().toLowerCase();
+
+    if (!q) {
+      results.innerHTML = "";
+      meta.textContent = index.length
+        ? "Type to search " + index.length + " filings."
+        : "Search index unavailable.";
+      return;
+    }
+
+    var matches = index.filter(function (item) {
+      var haystack = (
+        item.company + " " +
+        item.title + " " +
+        (item.topics || []).join(" ")
+      ).toLowerCase();
+      return haystack.indexOf(q) !== -1;
+    });
+
+    meta.textContent = matches.length + " result" + (matches.length === 1 ? "" : "s");
+
+    if (!matches.length) {
+      results.innerHTML = "";
+      return;
+    }
+
+    results.innerHTML = matches.map(function (item) {
+      var stampClass = item.status === "Partially Verified" ? "stamp partial" : "stamp";
+      return (
+        '<div class="search-result">' +
+          '<div class="search-result-meta mono">' + escapeHtml(item.date || "") + '</div>' +
+          '<h3><a href="' + escapeHtml(item.url) + '">' + escapeHtml(item.company) + ' — ' + escapeHtml(item.title) + '</a></h3>' +
+          '<div class="search-result-tags">' +
+            '<span class="' + stampClass + '">' + escapeHtml(item.status || "") + '</span>' +
+            (item.topics || []).map(function (t) {
+              return '<span class="search-tag mono">' + escapeHtml(t) + '</span>';
+            }).join("") +
+          '</div>' +
+        '</div>'
+      );
+    }).join("");
+  }
+
+  input.addEventListener("input", function () {
+    render(input.value);
+  });
+
+  render("");
+})();
+</script>
+
+</body>
+</html>
