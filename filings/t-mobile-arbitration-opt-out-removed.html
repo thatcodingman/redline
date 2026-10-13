@@ -137,6 +137,7 @@
 <nav class="site-nav">
   <a href="/">Docket</a>
   <a href="/archive.html">Archive</a>
+  <a href="/companies.html">Companies</a>
   <a href="/about.html">About</a>
   <a href="/methodology.html">Methodology</a>
   <a href="/submit.html">Submit a Filing</a>
@@ -230,11 +231,28 @@
     <div><a href="/archive.html">Browse every filing &rarr;</a> &nbsp;&middot;&nbsp; <a href="/methodology.html">How Redline verifies changes &rarr;</a> &nbsp;&middot;&nbsp; <a href="/feed.xml">RSS feed</a></div>
   </div>
 
+
+<section class="signup" id="signup">
+  <h2 class="signup-h">Get the docket by email</h2>
+  <p class="signup-p">One email each time a new docket is filed, twice a month. Just the filings, no tracking.</p>
+  <form name="docket-signup" method="POST" action="/subscribed.html" data-netlify="true" netlify-honeypot="bot-field" class="signup-form">
+    <input type="hidden" name="form-name" value="docket-signup">
+    <p class="signup-hp"><label>Leave this empty: <input name="bot-field"></label></p>
+    <label class="signup-label" for="signup-email">Email address</label>
+    <div class="signup-row">
+      <input type="email" id="signup-email" name="email" required placeholder="you@example.com" autocomplete="email">
+      <button type="submit">Subscribe</button>
+    </div>
+  </form>
+</section>
+
+
 </main>
 
 <footer>
   <nav>
     <a href="/archive.html">Archive</a>
+    <a href="/companies.html">Companies</a>
     <a href="/about.html">About</a>
     <a href="/methodology.html">Methodology</a>
     <a href="/submit.html">Submit a Filing</a>

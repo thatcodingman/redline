@@ -1,82 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://redlinedocket.com/</loc>
-    <lastmod>2026-10-12</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/archive.html</loc>
-    <lastmod>2026-10-12</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/methodology.html</loc>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/about.html</loc>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/submit.html</loc>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/contact.html</loc>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/terms.html</loc>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/google-ads-terms-arbitration-ai-inputs-fees.html</loc>
-    <lastmod>2026-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/adobe-terms-ai-training-clarification-2024.html</loc>
-    <lastmod>2026-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/discord-terms-arbitration-clause.html</loc>
-    <lastmod>2026-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/reddit-privacy-policy-llm-data-sharing.html</loc>
-    <lastmod>2026-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/starlink-privacy-policy-ai-training-opt-out.html</loc>
-    <lastmod>2026-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/github-copilot-ai-training-default-opt-out.html</loc>
-    <lastmod>2026-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/t-mobile-arbitration-opt-out-removed.html</loc>
-    <lastmod>2026-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/linkedin-ai-training-region-expansion.html</loc>
-    <lastmod>2026-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/paypal-venmo-contact-discovery-default-on.html</loc>
-    <lastmod>2026-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/adobe-general-terms-replacement-2025.html</loc>
-    <lastmod>2026-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/paypal-privacy-statement-amendment-sept-2026.html</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/best-buy-terms-digital-agent-restrictions.html</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/target-ios-app-liquid-glass-redesign.html</loc>
-    <lastmod>2026-08-23</lastmod>
-  </url>
-  <url>
-    <loc>https://redlinedocket.com/filings/doordash-spotlight-homepage-ads.html</loc>
-    <lastmod>2026-08-23</lastmod>
-  </url>
+<url>
+<loc>https://redlinedocket.com/</loc>
+<lastmod>2026-10-12</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/archive.html</loc>
+<lastmod>2026-10-12</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/companies.html</loc>
+<lastmod>2026-10-12</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/companies/adobe.html</loc>
+<lastmod>2026-10-12</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/companies/paypal.html</loc>
+<lastmod>2026-10-12</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/methodology.html</loc>
+</url>
+<url>
+<loc>https://redlinedocket.com/about.html</loc>
+</url>
+<url>
+<loc>https://redlinedocket.com/submit.html</loc>
+</url>
+<url>
+<loc>https://redlinedocket.com/contact.html</loc>
+</url>
+<url>
+<loc>https://redlinedocket.com/terms.html</loc>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/google-ads-terms-arbitration-ai-inputs-fees.html</loc>
+<lastmod>2026-09-01</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/adobe-terms-ai-training-clarification-2024.html</loc>
+<lastmod>2026-09-01</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/discord-terms-arbitration-clause.html</loc>
+<lastmod>2026-09-01</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/reddit-privacy-policy-llm-data-sharing.html</loc>
+<lastmod>2026-09-01</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/starlink-privacy-policy-ai-training-opt-out.html</loc>
+<lastmod>2026-09-01</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/github-copilot-ai-training-default-opt-out.html</loc>
+<lastmod>2026-09-01</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/t-mobile-arbitration-opt-out-removed.html</loc>
+<lastmod>2026-09-01</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/linkedin-ai-training-region-expansion.html</loc>
+<lastmod>2026-09-01</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/paypal-venmo-contact-discovery-default-on.html</loc>
+<lastmod>2026-09-01</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/adobe-general-terms-replacement-2025.html</loc>
+<lastmod>2026-09-01</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/paypal-privacy-statement-amendment-sept-2026.html</loc>
+<lastmod>2026-09-30</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/best-buy-terms-digital-agent-restrictions.html</loc>
+<lastmod>2026-09-30</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/target-ios-app-liquid-glass-redesign.html</loc>
+<lastmod>2026-08-23</lastmod>
+</url>
+<url>
+<loc>https://redlinedocket.com/filings/doordash-spotlight-homepage-ads.html</loc>
+<lastmod>2026-08-23</lastmod>
+</url>
 </urlset>

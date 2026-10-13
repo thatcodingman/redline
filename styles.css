@@ -806,3 +806,22 @@ footer nav a:hover{color:var(--ink);}
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto;}
 }
+
+/* --- Email signup (upgrade) --- */
+.signup{ max-width:860px; margin:2.4rem auto 0; padding:1.6rem 1.5rem; border:1px solid var(--rule); background:var(--paper-raised, rgba(0,0,0,0.02)); }
+.signup-h{ margin:0 0 0.4rem; font-size:1.15rem; }
+.signup-p{ margin:0 0 1rem; font-size:0.92rem; color:var(--ink-soft); }
+.signup-hp{ position:absolute; left:-9999px; }
+.signup-label{ font-family:'Courier Prime', monospace; font-size:0.72rem; color:var(--ink-soft); display:block; margin-bottom:0.3rem; }
+.signup-row{ display:flex; gap:0.6rem; flex-wrap:wrap; }
+.signup-row input[type="email"]{ flex:1 1 240px; padding:0.6rem 0.7rem; border:1px solid var(--rule); background:#fff; font-family:inherit; font-size:0.95rem; }
+.signup-row button{ padding:0.6rem 1.2rem; border:1px solid var(--ink); background:var(--ink); color:#fff; font-family:'Courier Prime', monospace; font-size:0.8rem; letter-spacing:0.03em; cursor:pointer; }
+.signup-row button:hover{ opacity:0.85; }
+@media (prefers-color-scheme: dark){
+  .signup-row input[type="email"]{ background:#1a1a1a; color:inherit; }
+}
+
+.signup-row input[type="email"]{ color:var(--ink); }
+@media (prefers-color-scheme: dark){
+  .signup-row input[type="email"]{ color:#f0f0f0; }
+}
